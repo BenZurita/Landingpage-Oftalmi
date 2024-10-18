@@ -12,12 +12,6 @@
   <link href="css/style.css" rel="stylesheet" media="screen">
   <link href="color/default.css" rel="stylesheet" media="screen">
 
-  <!-- =======================================================
-    Theme Name: Alstar
-    Theme URL: https://bootstrapmade.com/alstar-free-parallax-bootstrap-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
 </head>
 
 <body>
@@ -41,8 +35,8 @@
         <ul class="nav navbar-nav">
           <li class="current"><a href="#intro">Home</a></li>
           <li><a href="#contact">Inscribete</a></li>
-          <li><a href="#portfolio">Galería</a></li>
-          <li><a href="#about">Info</a></li>
+          <li><a href="#about">información</a></li>
+          <li><a href="#portfolio">galería</a></li>
         </ul>
       </div>
     </div>
@@ -57,6 +51,18 @@
 
           <!-- Slide 1 -->
           <div class="item active">
+            <div class="carousel-background"><img src="img/intro/6.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animated fadeInDown">Inscríbete</span></h2>
+                <p class="animated fadeInUp">Haznos llegar tus datos y te contactaremos!</p>
+                <a href="#contact" class="btn-get-started animated fadeInUp">Inscribirse</a>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Slide 2 -->
+          <div class="item">
             <div class="carousel-background"><img src="img/intro/4.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
@@ -66,8 +72,8 @@
               </div>
             </div>
           </div>
-          
-          <!-- Slide 2 -->
+
+          <!-- Slide 3 -->
           <div class="item">
             <div class="carousel-background"><img src="img/intro/5.jpg" alt=""></div>
             <div class="carousel-container">
@@ -75,18 +81,6 @@
                 <h2 class="animated fadeInDown">Mejores momentos</span></h2>
                 <p class="animated fadeInUp">Echale un vistazo a la galería y revive los mejores momentos</p>
                 <a href="#portfolio" class="btn-get-started animated fadeInUp">ir a galería</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="item">
-            <div class="carousel-background"><img src="img/intro/6.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animated fadeInDown">Contactanos</span></h2>
-                <p class="animated fadeInUp">Haznos llegar tus datos y te contactaremos!</p>
-                <a href="#contact" class="btn-get-started animated fadeInUp">Inscribirse</a>
               </div>
             </div>
           </div>
@@ -113,16 +107,16 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
-            <h2>Envíanos tus datos</h2>
+            <h2 id="titulo">Envíanos tus datos</h2>
             <div class="heading-line"></div>
-            <p>LLenando el siguiente formulario, puedes participar con nosotros para ganar premios y sorpresas </p>
+            <p>LLenando el siguiente formulario, puedes participar con nosotros para ganar premios y sorpresas <strong>(Por favor, si olvidas tu número asignado, coloca exactamente los mismos datos para recibir el mismo número asignado previamente)</strong> </p>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="sendmessage">¡te has inscrito correctamente!</div>
           <div id="errormessage"></div>
 
           <form action="process_form.php" method="post" class="form-horizontal contactForm" role="form">
@@ -200,13 +194,17 @@
           </div>
             <div class="form-group input-width">
               <div class="col-md-offset-2 col-md-8">
-                <button type="submit" class="btn btn-theme btn-lg btn-block">Enviar</button>
+                <button type="submit" class="btn btn-theme btn-lg btn-block" onclick="enviar()" >Enviar</button>
               </div>
             </div>
+            <div class="col-md-offset-2 col-md-8">
+              <div class="form-group">
+                  <div id="numeroAleatorio" class="numerorifa"></div>
+              </div>
+          </div>
           </form>
         </div>
       </div>
-
     </div>
   </section>
   <!-- Parallax 1 -->
@@ -222,7 +220,56 @@
       </div>
     </div>
   </section>
-  <!-- Works -->
+  <!-- información del congreso -->
+  <section id="about" class="home-section bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+          <div class="section-heading">
+            <h2>**Nombre del congreso**</h2>
+            <div class="heading-line"></div>
+            <p>En esta area, habrá toda la información pertinente del congreso actual</p>
+          </div>
+        </div>
+      </div>
+      <div class="row wow fadeInUp">
+        <div class="col-md-6 about-img">
+          <img src="img/about-img.jpg" alt="">
+        </div>
+
+        <div class="col-md-6 content">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elite storium paralate</h2>
+          <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</h3>
+          <p>
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum Libero justo laoreet sit amet
+            cursus sit amet dictum sit. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend
+            donec Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Parallax 2 -->
+  <section id="parallax2" class="home-section parallax" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="clients">
+            <li class="wow fadeInDown" data-wow-delay="0.3s"><a href="https://www.oftalmi.com/productos/"><img src="img/clients/6.png" width="200px" height="80px" /></a></li>
+            <li class="wow fadeInDown" data-wow-delay="0.6s"><a href="https://www.oftalmi.com/productos/"><img src="img/clients/7.png" width="200px" height="80px" /></a></li>
+            <li class="wow fadeInDown" data-wow-delay="0.9s"><a href="https://www.oftalmi.com/productos/"><img src="img/clients/8.png" width="200px" height="80px" /></a></li>
+            <li class="wow fadeInDown" data-wow-delay="1.1s"><a href="https://www.oftalmi.com/productos/"><img src="img/clients/5.png" width="200px" height="80px" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Portafolio -->
   <section id="portfolio" class="home-section bg-gray">
     <div class="container">
       <div class="row">
@@ -304,56 +351,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Parallax 2 -->
-  <section id="parallax2" class="home-section parallax" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="clients">
-            <li class="wow fadeInDown" data-wow-delay="0.3s"><a href="https://www.oftalmi.com/productos/"><img src="img/clients/6.png" width="200px" height="80px" /></a></li>
-            <li class="wow fadeInDown" data-wow-delay="0.6s"><a href="https://www.oftalmi.com/productos/"><img src="img/clients/7.png" width="200px" height="80px" /></a></li>
-            <li class="wow fadeInDown" data-wow-delay="0.9s"><a href="https://www.oftalmi.com/productos/"><img src="img/clients/8.png" width="200px" height="80px" /></a></li>
-            <li class="wow fadeInDown" data-wow-delay="1.1s"><a href="https://www.oftalmi.com/productos/"><img src="img/clients/5.png" width="200px" height="80px" /></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Información del Congreso -->
-  <section id="about" class="home-section bg-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div class="section-heading">
-            <h2>**Nombre del congreso**</h2>
-            <div class="heading-line"></div>
-            <p>En esta area, habrá toda la información pertinente del congreso actual</p>
-          </div>
-        </div>
-      </div>
-      <div class="row wow fadeInUp">
-        <div class="col-md-6 about-img">
-          <img src="img/about-img.jpg" alt="">
-        </div>
-
-        <div class="col-md-6 content">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elite storium paralate</h2>
-          <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</h3>
-          <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum Libero justo laoreet sit amet
-            cursus sit amet dictum sit. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend
-            donec Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Bottom widget -->
   <section id="bottom-widget" class="home-section bg-white">
     <div class="container">
@@ -361,18 +358,18 @@
         <div class="col-md-4">
           <div class="contact-widget wow bounceInLeft">
             <i class="fa fa-map-marker fa-4x"></i>
-            <h5>Main Office</h5>
+            <h5>Oficina Principal</h5>
             <p>
-              109 Borough High Street,<br />London SE1 1NL
+              Calle 6 Zona Industrial La Urbina,<br />Edif. Santo Domingo, Caracas 1070, Miranda
             </p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="contact-widget wow bounceInUp">
             <i class="fa fa-phone fa-4x"></i>
-            <h5>Call</h5>
+            <h5>Llamanos</h5>
             <p>
-              +1 111 9998 7774<br> +1 245 4544 6855
+              0212-2424904
 
             </p>
           </div>
@@ -380,9 +377,9 @@
         <div class="col-md-4">
           <div class="contact-widget wow bounceInRight">
             <i class="fa fa-envelope fa-4x"></i>
-            <h5>Email us</h5>
+            <h5>Escribenos</h5>
             <p>
-              hello@alstarstudio.com<br />sales@alstarstudio.com
+              Marketing.digital@Oftalmi.com
             </p>
           </div>
         </div>
@@ -426,15 +423,6 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p>Copyright &copy; Alstar. All rights reserved.</p>
-          <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Alstar
-            -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
       </div>
