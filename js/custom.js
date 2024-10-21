@@ -138,3 +138,61 @@
   new WOW().init();
 
 })(jQuery);
+
+function enviar() {
+  // Obtener todos los elementos input del formulario
+  var inputs = document.querySelectorAll('input');
+
+  // Verificar si todos los campos obligatorios están llenos
+  var todosLlenos = true;
+  var valores = [];
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].required && inputs[i].value === '') {
+      todosLlenos = false;
+      break;
+    }
+    valores.push(inputs[i].value);
+  }
+
+  // Si todos los campos están llenos, enviar el formulario y mostrar mensaje de éxito
+  if (todosLlenos) {
+    document.getElementById('sendmessage').style.display = 'block';
+    document.getElementById('errormessage').style.display = 'none';
+
+    // Limpiar los campos del formulario
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].value = '';
+    }
+
+    // Cambiar el texto del botón "Enviar"
+    var botonEnviar = document.querySelector('button[type="submit"]');
+    botonEnviar.textContent = 'Enviado correctamente';
+    botonEnviar.disabled = true; // Deshabilitar el botón para evitar múltiples envíos
+
+    // Simular la acción de envío del formulario (puedes reemplazar esto con la lógica real de envío)
+    setTimeout(function() {
+      botonEnviar.textContent = 'Enviar';
+      botonEnviar.disabled = false;
+    }, 2000); // Esperar 2 segundos antes de volver a habilitar el botón
+
+    // Generar un número basado en la combinación única de datos
+    var hash = generarHash(valores.join(''));
+    var numeroAleatorio = Math.abs(hash % 100) + 1;
+    document.getElementById('numeroAleatorio').textContent = numeroAleatorio;
+  } else {
+    // Mostrar mensaje de error si algún campo está vacío
+    document.getElementById('sendmessage').style.display = 'none';
+    document.getElementById('errormessage').style.display = 'block';
+    document.getElementById('errormessage').textContent = 'Por favor, completa todos los campos obligatorios.';
+  }
+}
+
+function generarHash(str) {
+  var hash = 0;
+  for (var i = 0; i < str.length; i++) {
+    var char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash |= 0; // Convertir a un entero de 32 bits
+  }
+  return hash;
+}
