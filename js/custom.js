@@ -138,7 +138,10 @@
   new WOW().init();
 
 })(jQuery);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c5d0e91a41ebe8f5eda429cf7d05579e9ab89f6
 function enviar() {
   // Obtener todos los elementos input del formulario
   var inputs = document.querySelectorAll('input');
