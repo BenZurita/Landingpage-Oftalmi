@@ -402,11 +402,10 @@ Intro
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #161588;
 }
 
 #intro .btn-get-started:hover {
-  background: #1b0b74;
+  background: #0407a7;
   color: #fff;
   text-decoration: none;
 }
