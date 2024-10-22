@@ -92,73 +92,73 @@
   <!-- Inscripción badge -->
   <section id="contact" class="home-section bg-gray">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2 id="titulo">Envíanos tus datos</h2>
-            <div class="heading-line"></div>
-            <p>LLenando el siguiente formulario, puedes participar con nosotros para ganar premios y sorpresas <strong>(Por favor, si olvidas tu número asignado, coloca exactamente los mismos datos para recibir el mismo número asignado previamente)</strong> </p>
-          </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2 id="titulo">Envíanos tus datos</h2>
+                    <div class="heading-line"></div>
+                    <p>LLenando el siguiente formulario, puedes participar con nosotros para ganar premios y sorpresas <strong>(Por favor, si olvidas tu número asignado, coloca exactamente los mismos datos para recibir el mismo número asignado previamente)</strong> </p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div id="sendmessage">¡Te has inscrito correctamente!</div>
-          <div id="errormessage"></div>
-          <form action="process_form.php" method="post" class="form-horizontal contactForm" role="form">
-            <div class="form-group">
-              <input type="text" name="name" class="form-control input-width" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor, escribe tu nombre" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" name="apellido" class="form-control input-width" id="apellido" placeholder="Apellido" data-rule="minlen:4" data-msg="Por favor, escribe tu apellido" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="tel" name="Telefono" class="form-control input-width" id="teléfono" placeholder="Teléfono" pattern="\d{3}-\d{3}-\d{4}" title="El número de teléfono debe tener el formato 412-555-5555" required />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control input-width" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Por favor, coloca un email válido" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control input-width" name="especialidad" id="subject" placeholder="Especialidad" data-rule="minlen:4" data-msg="Por favor, escribe tu especialidad" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <select name="estado" class="form-control input-width" id="estado">
-                <option value="">Selecciona tu estado</option>
-                <option value="Amazonas">Amazonas</option>
-                <option value="Anzoátegui">Anzoátegui</option>
-                <option value="Apure">Apure</option>
-                <option value="Aragua">Aragua</option>
-                <option value="Barinas">Barinas</option>
-                <option value="Bolívar">Bolívar</option>
-                <option value="Carabobo">Carabobo</option>
-                <option value="Cojedes">Cojedes</option>
-                <option value="Delta Amacuro">Delta Amacuro</option>
-                <option value="Distrito Capital">Distrito Capital</option>
-                <option value="Falcón">Falcón</option>
-                <option value="Guárico">Guárico</option>
-                <option value="Lara">Lara</option>
-                <option value="Mérida">Mérida</option>
-                <option value="Miranda">Miranda</option>
-                <option value="Monagas">Monagas</option>
-                <option value="Nueva Esparta">Nueva Esparta</option>
-                <option value="Portuguesa">Portuguesa</option>
-                <option value="Sucre">Sucre</option>
-                <option value="Táchira">Táchira</option>
-                <option value="Trujillo">Trujillo</option>
-                <option value="Vargas">Vargas</option>
-                <option value="Yaracuy">Yaracuy</option>
-                <option value="Zulia">Zulia</option>
-              </select>
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-theme btn-lg btn-block" onclick="enviar()">Enviar</button>
-            </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="sendmessage">¡Te has inscrito correctamente!</div>
+                <div id="errormessage"></div>
+                <form action="process_form.php" method="post" class="form-horizontal contactForm" role="form">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control input-width" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor, escribe tu nombre" required />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="apellido" class="form-control input-width" id="apellido" placeholder="Apellido" data-rule="minlen:4" data-msg="Por favor, escribe tu apellido" required />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="Telefono" class="form-control input-width" id="teléfono" placeholder="Teléfono" pattern="\d{3}-\d{3}-\d{4}" title="El número de teléfono debe tener el formato 412-555-5555" required />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control input-width" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Por favor, coloca un email válido" required />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-width" name="especialidad" id="subject" placeholder="Especialidad" data-rule="minlen:4" data-msg="Por favor, escribe tu especialidad" required />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <select name="estado" class="form-control input-width" id="estado" required>
+                            <option value="">Selecciona tu estado</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Anzoátegui">Anzoátegui</option>
+                            <option value="Apure">Apure</option>
+                            <option value="Aragua">Aragua</option>
+                            <option value="Barinas">Barinas</option>
+                            <option value="Bolívar">Bolívar</option>
+                            <option value="Carabobo">Carabobo</option>
+                            <option value="Cojedes">Cojedes</option>
+                            <option value="Delta Amacuro">Delta Amacuro</option>
+                            <option value="Distrito Capital">Distrito Capital</option>
+                            <option value="Falcón">Falcón</option>
+                            <option value="Guárico">Guárico</option>
+                            <option value="Lara">Lara</option>
+                            <option value="Mérida">Mérida</option>
+                            <option value="Miranda">Miranda</option>
+                            <option value="Monagas">Monagas</option>
+                            <option value="Nueva Esparta">Nueva Esparta</option>
+                            <option value="Portuguesa">Portuguesa</option>
+                            <option value="Sucre">Sucre</option>
+                            <option value="Táchira">Táchira</option>
+                            <option value="Trujillo">Trujillo</option>
+                            <option value="Vargas">Vargas</option>
+                            <option value="Yaracuy">Yaracuy</option>
+                            <option value="Zulia">Zulia</option>
+                        </select>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-theme btn-lg btn-block" onclick="enviar()">Enviar</button>
+                    </div>
                     <div class="form-group">
                         <div id="numeroAleatorio" class="numerorifa"></div>
                     </div>
@@ -168,7 +168,7 @@
                 <img src="img/doctors-working.jpg" class="img-responsive">
             </aside>
         </div>
- </div>
+    </div>
 </section>
    <!-- Parallax 1 -->
    <section id="parallax1" class="home-section parallax" data-stellar-background-ratio="0.5">
