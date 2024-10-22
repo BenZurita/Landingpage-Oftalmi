@@ -908,7 +908,7 @@ more media queries
 }
 
 #carousel-portfolio .carousel-inner .item img:hover {
-	transform: scale(1.3);
+	transform: rotate(5deg);
 }
 
 #carousel-portfolio .carousel-inner .item img {
@@ -918,12 +918,6 @@ more media queries
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-#carousel-portfolio .carousel-inner .item img {
-    transition: transform 0.3s ease;
-}
-#carousel-portfolio .carousel-inner .item img:hover {
-    transform: rotate(10deg);
-}
 .clients img {
 	transition: transform 0.3s ease;
   }
