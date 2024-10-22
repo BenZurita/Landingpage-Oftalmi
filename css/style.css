@@ -922,3 +922,19 @@ more media queries
 #carousel-portfolio .carousel-inner .item img:hover {
     transform: rotate(10deg);
 }
+.clients img {
+	transition: transform 0.3s ease;
+  }
+  
+  .clients img:hover {
+	transform: scale(1.3);
+  }
+  .clients img {
+	transition: filter 0.3s ease;
+	filter: invert(0); /* Las letras son blancas */
+  }
+  
+  .clients img:hover {
+	filter: invert(1); /* Las letras se vuelven negras */
+  }
+  
