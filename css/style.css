@@ -894,3 +894,11 @@ more media queries
 	padding: 10px;
 	margin: 10px;
 }
+.valid {
+	border-color: green;
+  }
+  
+  .invalid {
+	border-color: red;
+  }
+  

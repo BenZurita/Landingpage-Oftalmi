@@ -195,3 +195,19 @@ function generarHash(str) {
   }
   return hash;
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('.contactForm');
+  const inputs = form.querySelectorAll('input');
+
+  inputs.forEach(input => {
+    input.addEventListener('input', function() {
+      if (input.checkValidity()) {
+        input.classList.remove('invalid');
+        input.classList.add('valid');
+      } else {
+        input.classList.remove('valid');
+        input.classList.add('invalid');
+      }
+    });
+  });
+});
