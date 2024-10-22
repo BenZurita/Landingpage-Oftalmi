@@ -896,10 +896,12 @@ more media queries
 }
 .valid {
 	border-color: green;
+	border-style:dashed;
   }
   
   .invalid {
 	border-color: red;
+	border-style: dashed;
   }
   #carousel-portfolio .carousel-inner .item img {
     transition: transform 0.3s ease;
@@ -931,10 +933,17 @@ more media queries
   }
   .clients img {
 	transition: filter 0.3s ease;
-	filter: invert(0); /* Las letras son blancas */
+	filter: invert(0); 
   }
   
   .clients img:hover {
-	filter: invert(1); /* Las letras se vuelven negras */
+	filter: invert(1); 
   }
-  
+  #carousel-portfolio .carousel-inner .item img {
+    filter: grayscale(70%);
+    transition: filter 0.5s ease;
+}
+
+#carousel-portfolio .carousel-inner .item img:hover {
+    filter: grayscale(0%);
+}
