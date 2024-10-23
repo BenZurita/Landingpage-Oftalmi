@@ -889,6 +889,9 @@ more media queries
 		font-size: 70px;
 	}
 }
+/* ================================
+número rifa y formulario
+================================= */
 .numerorifa{
 	font-size: 300%;
 	padding: 10px;
@@ -903,6 +906,10 @@ more media queries
 	border-color: red;
 	border-style: dashed;
   }
+
+/* ================================
+galería
+================================= */
   #carousel-portfolio .carousel-inner .item img {
     transition: transform 0.3s ease;
 }
@@ -917,7 +924,9 @@ more media queries
 #carousel-portfolio .carousel-inner .item img:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-
+/* ================================
+productos parallax 2
+================================= */
 .clients img {
 	transition: transform 0.3s ease;
   }
